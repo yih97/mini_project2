@@ -10,6 +10,9 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="./static/bootstrap/assets/css/main.css">
+
+
+
 </head>
 
 <body>
@@ -18,9 +21,9 @@
     <div id="viewport" class="l-viewport">
       <div class="l-wrapper">
         <header class="header">
-          <a class="header--logo" href="#0">
+          <a class="header--logo" href="http://127.0.0.1:8000/">
             <img src="./static/bootstrap/assets/img/logo.png" alt="Global">
-            <p>Global</p>
+            <p>CLOSED_SCHOOL</p>
           </a>
           <button class="header--cta cta">Hire Us</button>
           <div class="header--nav-toggle">
@@ -29,11 +32,12 @@
         </header>
         <nav class="l-side-nav">
           <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
+            <li class="is-active"><span id="for_test">Home</span></li>
             <li><span>Developer</span></li>
-            <li><span>hypothesis 1</span></li>
-            <li><span>hypothesis 2</span></li>
-            <li><span>Result</span></li>
+            <li><span id="for_hypo_1">hypothesis 1</span></li>
+            <li><span id="for_hypo_2">hypothesis 2</span></li>
+            <li><span id="for_hypo_3">hypothesis 3</span></li>
+            <li><span id="for_result">Result</span></li>
           </ul>
         </nav>
         <ul class="l-main-content main-content">
@@ -53,15 +57,47 @@
               </div>
               <!--메인 홈페이지 맨 밑에 부분-->
               <div class="intro--options">
-                <a href="#0">
+                <a href="#0" id="hypo_1">
+                  <script>
+                    const for_hypo_1 = document.getElementById("for_hypo_1")
+                    const hypo_1 = document.getElementById("hypo_1");
+                    hypo_1.addEventListener("click", function () {
+                    for_hypo_1.click();
+                    });
+                  </script>
                   <h3>가설1</h3>
                   <p>가설1의 핵심 문구</p>
                 </a>
-                <a href="#0">
+                <a href="#0" id="hypo_2">
+                  <script>
+                    const for_hypo_2 = document.getElementById("for_hypo_2")
+                    const hypo_2 = document.getElementById("hypo_2");
+                    hypo_2.addEventListener("click", function () {
+                    for_hypo_2.click();
+                    });
+                  </script>
                   <h3>가설2</h3>
                   <p>가설2의 핵심 문구</p>
                 </a>
-                <a href="#0">
+                <a href="#0" id="hypo_3">
+                  <script>
+                    const for_hypo_3 = document.getElementById("for_hypo_3")
+                    const hypo_3 = document.getElementById("hypo_3");
+                    hypo_3.addEventListener("click", function () {
+                    for_hypo_3.click();
+                    });
+                  </script>
+                  <h3>가설3</h3>
+                  <p>가설3의 핵심 문구</p>
+                </a>
+                <a href="#0" id="result">
+                  <script>
+                    const for_result = document.getElementById("for_result")
+                    const result = document.getElementById("result");
+                    result.addEventListener("click", function () {
+                    for_result.click();
+                    });
+                  </script>
                   <h3>결론</h3>
                   <p>결론의 핵심 문구</p>
                 </a>
@@ -152,6 +188,7 @@
               </div>
             </div>
           </li>
+          <!--가설2-->
           <li class="l-section section">
             <div class="contact">
               <div class="contact--lockup">
@@ -170,6 +207,26 @@
               </div>
             </div>
           </li>
+         <!--가설3-->
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Pawia 5, 31-154 Kraków, Poland</p>
+                    <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
+                    <a href="tel:+148126287560">+48 12 628 75 60</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="#0">Bēhance</a></li>
+                    <li><a href="#0">dribbble</a></li>
+                    <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--result-->
           <li class="l-section section">
             <div class="hire">
               <h2>You want us to do</h2>
@@ -264,6 +321,7 @@
     <li>Developer</li>
     <li>hypothesis 1</li>
     <li>hypothesis 2</li>
+    <li>hypothesis 3</li>
     <li>Result</li>
   </ul>
 </div>
