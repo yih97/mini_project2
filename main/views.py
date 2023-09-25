@@ -18,4 +18,3 @@ def main_page(request):
         popup=idx).add_to(map)
     return render(request, 'main/main.html',
     {"map":"map"})
-
