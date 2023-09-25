@@ -10,7 +10,6 @@ class ClosedSchoolBoxh(models.Model):
         managed = False
         db_table = 'closed_school_boxh'
 
-
 class ClosedSchoolMap(models.Model):
     school_name = models.CharField(db_column='School_name', max_length=50, blank=True, null=True)  # Field name made lowercase.
     closed_school_year = models.IntegerField(db_column='Closed_school_year', blank=True, null=True)  # Field name made lowercase.
@@ -21,6 +20,9 @@ class ClosedSchoolMap(models.Model):
     class Meta:
         managed = False
         db_table = 'closed_school_map'
+
+
+
 
 
 class FertilityRateStudents(models.Model):
