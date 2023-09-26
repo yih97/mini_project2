@@ -38,6 +38,7 @@
 
 
 
+
         .box_h {
             padding-top: 100px;
             width: 20%;
@@ -45,6 +46,7 @@
             float: left;
             margin-left: 1px;
         }
+
 
     </style>
 </head>
@@ -59,8 +61,12 @@
                     <header class="header">
                         <a class="header--logo" href="http://127.0.0.1:8000/">
                             <img src="./static/bootstrap/assets/img/icon-school.png" alt="Global">
-                            <p>CLOSED SCHOOL</p></a>
 
+                            <p>CLOSED SCHOOL</p>
+                        </a>
+                        <div class="header--nav-toggle">
+                            <span></span>
+                        </div>
 
                         </a>
                     </header>
@@ -91,7 +97,6 @@
                                         </svg>
                                         <span class="btn-background"></span>
                                     </button>
-
                                     <script>
                                         const for_developer = document.getElementById("for_developer")
                                         const developer = document.getElementById("developer");
@@ -99,8 +104,6 @@
                                             for_developer.click();
                                         });
                                     </script>
-
-
                                     </br>
                                     </br>
                                     <!--메인화면 노션 페이지이동 버튼-->
@@ -112,7 +115,7 @@
                                         </svg>
                                         <span class="btn-background"></span>
                                     </button>
-                                    <img src="./static/bootstrap/assets/img/introduction-visual.png" alt="Welcome">
+                                    <img src="./static/bootstrap/assets/img/empty-classroom.jpg" alt="Welcome" style="width:110%;height:110%;">
                                 </div>
                                 <!--메인 홈페이지 맨 밑에 부분-->
                                 <div class="intro--options">
@@ -221,28 +224,32 @@
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
-                                    <h2>We<br>believe in<br>passionate<br>people</h2>
-                                    <a href="#0">Career
-                                        <span>
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                                                <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                                                </g>
-                                            </svg>
-                                        </span>
-                                    </a>
+                                    <h2> 가설 1 </h2>
                                     <img src="./static/bootstrap/assets/img/about-visual.png" alt="About Us">
                                 </div>
                                 <div class="about--options">
-                                    <a href="#0">
+
+                                    <a href="#0" id="hypo_1_1">
                                         <img src="./static/bootstrap/assets/img/프로젝트사진1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
-                                        <h3>Winners</h3>
-                                    </a>
-                                    <a href="#0">
-                                        <h3>Philosophy</h3>
-                                    </a>
-                                    <a href="#0">
-                                        <h3>History</h3>
+                                        <script>
+                                            const for_hypo_1_1 = document.getElementById("for_hypo_1_1")
+                                            const hypo_1_1 = document.getElementById("hypo_1_1");
+                                            hypo_1_1.addEventListener("click", function() {
+                                                for_hypo_1_1.click();
+                                            });
+                                        </script>
+                                        <h3>가설 1-1</h3>
+
+                                    <a href="#0" id="hypo_1_2">
+
+                                        <script>
+                                            const for_hypo_1_2 = document.getElementById("for_hypo_1_2")
+                                            const hypo_1_2 = document.getElementById("hypo_1_2");
+                                            hypo_1_2.addEventListener("click", function() {
+                                                for_hypo_1_2.click();
+                                            });
+                                        </script>
+                                        <h3>가설 1-2</h3>
                                     </a>
                                 </div>
                             </div>
@@ -251,6 +258,7 @@
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
+
                                     <h4>출산율에 따른<br>초등학교<br>입학자수 분석</h4>
                                     <img src="./static/bootstrap/assets/img/1-1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100px; height:100px;">
 <!--                                    <a href="#0">Career-->
@@ -262,14 +270,30 @@
 <!--                                            </svg>-->
 <!--                                        </span>-->
 <!--                                    </a>-->
+
                                 </div>
                                 <div class="about--options">
-                                    <a href="#0">
-                                        <h3>Winners</h3>
+                                    <a href="#0" id="hypo_1_1_to_1">
+                                        <script>
+                                            const hypo_1_1_to_1 = document.getElementById("hypo_1_1_to_1");
+                                            hypo_1_1_to_1.addEventListener("click", function() {
+                                                for_hypo_1.click();
+                                            });
+                                        </script>
+                                        <h3>가설 1</h3>
                                     </a>
-                                    <a href="#0">
-                                        <h3>Philosophy</h3>
+
+                                    <a href="#0" id="hypo_1_1_to_1_2">
+                                        가설 1-2 테스트
+                                        <script>
+                                            const hypo_1_1_to_1_2 = document.getElementById("hypo_1_1_to_1_2");
+                                            hypo_1_1_to_1_2.addEventListener("click", function() {
+                                                for_hypo_1_2.click();
+                                            });
+                                        </script>
+                                        <h3>가설 1-2</h3>
                                     </a>
+
                                 </div>
                             </div>
                         </li>
@@ -277,27 +301,30 @@
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
-                                    <h2>We<br>believe in<br>passionate<br>people</h2>
-                                    <a href="#0">Career
-                                        <span>
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                                                <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                                                </g>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <img src="./static/bootstrap/assets/img/about-visual.png" alt="About Us">
+                                    <h2> 가설 1-2 </h2>
+                                    <img id="student_per" src="./static/bootstrap/assets/img/연도별_교원_1인당_학생수와_교원수.png" alt="About Us" style="width:80%;height:80%;">
+
                                 </div>
                                 <div class="about--options">
-                                    <a href="#0">
-                                        <h3>Winners</h3>
+                                    <a href="#0" id="hypo_1_2_to_1">
+                                        <script>
+                                            const hypo_1_2_to_1 = document.getElementById("hypo_1_2_to_1");
+                                            hypo_1_2_to_1.addEventListener("click", function() {
+                                                for_hypo_1.click();
+                                            });
+                                        </script>
+                                        <h3>가설 1</h3>
                                     </a>
-                                    <a href="#0">
-                                        <h3>Philosophy</h3>
-                                    </a>
-                                    <a href="#0">
-                                        <h3>History</h3>
+                                    <a href="#0" id="hypo_1_2_to_1_1">
+
+                                        <script>
+                                            const hypo_1_2_to_1_1 = document.getElementById("hypo_1_2_to_1_1");
+                                            hypo_1_2_to_1_1.addEventListener("click", function() {
+                                                for_hypo_1_1.click();
+                                            });
+                                        </script>
+
+                                        <h3>가설 1-1</h3>
                                     </a>
                                 </div>
                             </div>
@@ -308,7 +335,9 @@
                                 <!--부모태그-->
                                 <div class="main">
                                     <!--folium_map태그-->
+
                                     <div class="folium_map" style="padding-top:100px" width="800",height="900">
+
                                         <figure id="map_size">
                                             {{map|safe}}
                                             <details>
@@ -318,9 +347,11 @@
                                                 </div>
                                             </details>
                                         </figure>
+
                                     </div>
                                     <!--수평막대그래프-->
                                     <div class="box_h_map" style="padding-top:100px">
+
                                         <img src="./static/bootstrap/assets/img/폐교연도_별_폐교수.png" alt="폐교연도 별 폐교수" width="450" height="700">
                                     </div>-->
                                 </div>
@@ -332,9 +363,11 @@
 
                         <li class="l-section section">
                             <div class="contact">
+
                                 <div class="contact--lockup" style="margin-left:470px">
                                     <img src="./static/bootstrap/assets/img/2008.png" style="width: 500px; height: 500px;"/>
                                     <img src="./static/bootstrap/assets/img/2023.png" style="width: 500px; height: 500px; margin-right: 100px;"/>
+
                                 </div>
                             </div>
                         </li>
@@ -353,6 +386,8 @@
             <li class="is-active">Home</li>
             <li>Developers</li>
             <li>hypothesis 1</li>
+            <li>hypothesis 1-1</li>
+            <li>hypothesis 1-2</li>
             <li>hypothesis 2</li>
             <li>hypothesis 3</li>
             <li>Result</li>
