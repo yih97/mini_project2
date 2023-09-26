@@ -10,7 +10,9 @@ from folium.plugins import MarkerCluster
 import geocoder
 
 def main_page(request):
-    figure = folium.Map(location=[37.55, 126.98], zoom_start=12)
+    figure = folium.Map(location=[37.55, 126.98], zoom_start=6)
+
+    folium.TileLayer('cartodbdark_matter').add_to(figure)
     marker_cluster_kor_marker = MarkerCluster().add_to(figure)
     popups = []
 
@@ -32,4 +34,8 @@ def main_page(request):
            }
 
     return render(request, 'main/main.html', context)
+
+
+
+
 
