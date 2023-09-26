@@ -15,24 +15,14 @@ def main_page(request):
     popups = []
 
     for i in ClosedSchoolMap.objects.values():
-        name = []
-        year = []
 
-        name.append(i["school_name"])
-        year.append(i["closed_school_year"])
-
-        popup_html = f"<b>{name[0]} ({year[0]}년 폐교)</b>"  # 팝업 내용 수정
+        popup_html = f"<b>{i['school_name']} ({i['closed_school_year']}년 폐교)</b>"  # 팝업 내용 수정
         popups.append(folium.Popup(popup_html, max_width=200))
 
     for i in range(len(ClosedSchoolMap.objects.values())):
-        lat = []
-        log = []
-
-        lat.append(ClosedSchoolMap.objects.values()[i]["latitude"])
-        log.append(ClosedSchoolMap.objects.values()[i]["longitude"])
 
         folium.Marker(
-            location=[lat[0], log[0]],
+            location=[ClosedSchoolMap.objects.values()[i]["latitude"], ClosedSchoolMap.objects.values()[i]["longitude"]],
             icon=folium.Icon(color='blue'),  # 아이콘 색상 설정
             popup=popups[i] # 팝업 설정
         ).add_to(marker_cluster_kor_marker)
@@ -42,6 +32,4 @@ def main_page(request):
            }
 
     return render(request, 'main/main.html', context)
-
-
 

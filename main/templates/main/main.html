@@ -11,6 +11,16 @@
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="./static/bootstrap/assets/css/main.css">
 
+  <style>
+    figure#map_size {
+
+      padding-left: 20%;
+      padding-top: 5%;
+      height: 60%;
+      width: 60%;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -25,10 +35,7 @@
             <p>CLOSED_SCHOOL</p>
 
           </a>
-          <button class="header--cta cta">Hire Us</button>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>
+
         </header>
         <nav class="l-side-nav">
           <ul class="side-nav">
@@ -207,6 +214,11 @@
                 {{ map|safe }}
             </div>
             <div class="contact">
+              <div class="container" style="padding-top:30px">
+                <figure id="map_size">
+                  {{map|safe}}
+                </figure>
+              </div>
               <!--모달창-->
               <div class="contact--lockup">
                 <div class="modal">
