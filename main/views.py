@@ -10,7 +10,12 @@ from folium.plugins import MarkerCluster
 import geocoder
 
 def main_page(request):
-    figure = folium.Map(location=[37.55, 126.98], zoom_start=12)
+    figure = folium.Map(location=[37.55, 126.98], zoom_start=6)
+    # 배경지도 타일 설정하기
+    #layer = "midnight"
+
+    folium.TileLayer("cartodbdark_matter").add_to(figure)
+    #folium.TileLayer(layer = layer).add_to(figure)
     marker_cluster_kor_marker = MarkerCluster().add_to(figure)
     popups = []
 
