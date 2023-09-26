@@ -16,6 +16,8 @@ def main_page(request):
 
     folium.TileLayer("cartodbdark_matter").add_to(figure)
     #folium.TileLayer(layer = layer).add_to(figure)
+
+    
     marker_cluster_kor_marker = MarkerCluster().add_to(figure)
     popups = []
 
@@ -37,4 +39,8 @@ def main_page(request):
            }
 
     return render(request, 'main/main.html', context)
+
+
+
+
 
