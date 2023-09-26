@@ -19,6 +19,10 @@
       height: 60%;
       width: 60%;
     }
+    li.side-nav:hover{
+      color : white
+    }
+
   </style>
 
 </head>
@@ -31,18 +35,22 @@
         <header class="header">
           <a class="header--logo" href="http://127.0.0.1:8000/">
             <img src="./static/bootstrap/assets/img/logo.png" alt="Global">
-
             <p>CLOSED_SCHOOL</p>
-
           </a>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+
 
         </header>
         <nav class="l-side-nav">
           <ul class="side-nav">
-            <li class="is-active"><span id="for_test">Home</span></li>
-            <li><span>Developer</span></li>
 
+            <li class="is-active side_nav"><span>Home</span></li>
+            <li class="side_nav"><span id="for_developer">Developers</span></li>
             <li><span id="for_hypo_1">hypothesis 1</span></li>
+            <li><span id="for_hypo_1_1">hypothesis 1_1</span></li>
+            <li><span id="for_hypo_1_2">hypothesis 1_2</span></li>
             <li><span id="for_hypo_2">hypothesis 2</span></li>
             <li><span id="for_hypo_3">hypothesis 3</span></li>
             <li><span id="for_result">Result</span></li>
@@ -54,14 +62,24 @@
               <div class="intro--banner">
                 <h1>closed<br>school</h1>
                 <!--메인화면 개발자 페이지이동 버튼-->
-                <button class="cta">Developer
-                  <svg version="1.1" id="developer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                <button id="developer">Developers
+                  <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                   <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                     <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
                   </g>
                   </svg>
                   <span class="btn-background"></span>
                 </button>
+
+                  <script>
+                    const for_developer = document.getElementById("for_developer")
+                    const developer = document.getElementById("developer");
+                    developer.addEventListener("click", function () {
+                    for_developer.click();
+                    });
+                  </script>
+
+
                 </br>
                 </br>
                 <!--메인화면 노션 페이지이동 버튼-->
@@ -127,7 +145,7 @@
           <!--section별-->
           <li class="l-section section">
             <!--개발자들 소개-->
-            <div class="work", id="developer">
+            <div class="work">
               <h2>Developer</h2>
               <div class="work--lockup">
                 <ul class="slider">
@@ -197,6 +215,65 @@
               </div>
               <div class="about--options">
                 <a href="#0">
+                  </script>
+                  <h3>Winners</h3>
+                </a>
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>History</h3>
+                </a>
+              </div>
+            </div>
+          </li>
+          <!-- 가설 1-1-->
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>We<br>believe in<br>passionate<br>people</h2>
+                <a href="#0">Career
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="./static/bootstrap/assets/img/about-visual.png" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="#0">
+                  <h3>Winners</h3>
+                </a>
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>History</h3>
+                </a>
+              </div>
+            </div>
+          </li>
+          <!-- 가설 1-2-->
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>We<br>believe in<br>passionate<br>people</h2>
+                <a href="#0">Career
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="./static/bootstrap/assets/img/about-visual.png" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="#0">
                   <h3>Winners</h3>
                 </a>
                 <a href="#0">
@@ -210,13 +287,16 @@
           </li>
           <!--가설2-->
           <li class="l-section section">
-            <div class="container">
-                {{ map|safe }}
-            </div>
-            <div class="contact">
-              <div class="container" style="padding-top:30px">
+            <div class="contact" >
+              <div class="container" style="padding:30px">
                 <figure id="map_size">
                   {{map|safe}}
+                  <details>
+                    <summary> 열고 펼치기 </summary>
+                    <div>
+                      test
+                    </div>
+                  </details>
                 </figure>
               </div>
               <!--모달창-->
@@ -349,7 +429,7 @@
   </div>
   <ul class="outer-nav">
     <li class="is-active">Home</li>
-    <li>Developer</li>
+    <li>Developers</li>
     <li>hypothesis 1</li>
     <li>hypothesis 2</li>
     <li>hypothesis 3</li>
