@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-3u3r-n*9b)_mpa+v*k7z9^u=4qrfp^$$ixsg4pw%mgkc(-i9hd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,34 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
 ]
+
+##CORS
+# CORS_ORIGIN_ALLOW_ALL=True
+# CORS_ALLOW_CREDENTIALS = True
+#
+# CORS_ALLOW_METHODS = (
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# )
+#
+# CORS_ALLOW_HEADERS = (
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'dnt',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+# )
+
 
 ROOT_URLCONF = 'closed_school.urls'
 
@@ -84,7 +112,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "0000",
         "HOST": "127.0.0.1",
-        "PORT": "3307",
+        "PORT": "3306",
     }
 }
 
