@@ -6,103 +6,101 @@
 <html lang="ko">
 
 <head>
-<title>closed school</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="HTML5 website template">
-<meta name="keywords" content="global, template, html, sass, jquery">
-<meta name="author" content="Bucky Maler">
-<link rel="stylesheet" href="./static/bootstrap/assets/css/main.css">
+    <title>closed school</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="./static/bootstrap/assets/css/main.css">
 
 
-<style>
-  .folium_map{
-  padding-top : 100px;
-  padding-left: 10%;
-  width : 55%;
-  float : left;
-}
-
-.box_h_map{
-  float : right;
-  padding-top : 85px;
- }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 1000px;
-}
-
-.mySlideDiv {
-    display: none;
-}
-
-.mySlideDiv.active {
-    display: block;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: white;
-    font-size: 24px;
-    border: none;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-</style>
-<script>
-    var slideIndex = 1;
-    showSlide(slideIndex);
-
-    // 다음 슬라이드를 보여줍니다.
-    function nextSlide() {
-        showSlide(slideIndex += 1);
-    }
-
-
-    // 이전 슬라이드를 보여줍니다.
-    function prevSlide() {
-        showSlide(slideIndex -= 1);
-    }
-
-    // 현재 슬라이드를 보여줍니다.
-    function showSlide(n) {
-        var slides = document.getElementsByClassName("mySlideDiv");
-        if (n > slides.length) {
-            slideIndex = 1;
+    <style>
+        .folium_map {
+            padding-top: 100px;
+            padding-left: 10%;
+            width: 55%;
+            float: left;
         }
-        if (n < 1) {
-            slideIndex = slides.length;
+
+        .box_h_map {
+            float: right;
+            padding-top: 85px;
         }
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        slides[slideIndex - 1].style.display = "block";
-    }
-</script>
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+        }
+
+        .mySlideDiv {
+            display: none;
+        }
+
+        .mySlideDiv.active {
+            display: block;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: white;
+            font-size: 24px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+    <script>
+        var slideIndex = 1;
+        showSlide(slideIndex);
+
+        // 다음 슬라이드를 보여줍니다.
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
 
 
+        // 이전 슬라이드를 보여줍니다.
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        // 현재 슬라이드를 보여줍니다.
+        function showSlide(n) {
+            var slides = document.getElementsByClassName("mySlideDiv");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 
 
 </head>
@@ -131,12 +129,12 @@ body {
 
                             <li class="is-active side_nav"><span>Home</span></li>
                             <li class="side_nav"><span id="for_developer">Developers</span></li>
-                            <li><span id="for_hypo_1">hypothesis 1</span></li>
-                            <li><span id="for_hypo_1_1">hypothesis 1_1</span></li>
-                            <li><span id="for_hypo_1_2">hypothesis 1_2</span></li>
-                            <li><span id="for_hypo_2">hypothesis 2</span></li>
-                            <li><span id="for_hypo_3">hypothesis 3</span></li>
-                            <li><span id="for_result">Result</span></li>
+                            <li><span id="for_hypo_1">가설 1</span></li>
+                            <li><span id="for_hypo_1_1">가설 1-1</span></li>
+                            <li><span id="for_hypo_1_2">가설 1-2</span></li>
+                            <li><span id="for_hypo_2">가설 2</span></li>
+                            <li><span id="for_hypo_3">가설 3</span></li>
+                            <li><span id="for_result">결론</span></li>
                         </ul>
                     </nav>
                     <ul class="l-main-content main-content">
@@ -184,7 +182,7 @@ body {
                                             });
                                         </script>
                                         <h3>가설1</h3>
-                                        <p>가설1의 핵심 문구</p>
+                                        <p> 입학자 수 VS 출생자 수 </p>
                                     </a>
                                     <a href="#0" id="hypo_2">
                                         <script>
@@ -195,7 +193,7 @@ body {
                                             });
                                         </script>
                                         <h3>가설2</h3>
-                                        <p>가설2의 핵심 문구</p>
+                                        <p> 담임 교사 VS 학생 수 </p>
                                     </a>
                                     <a href="#0" id="hypo_3">
                                         <script>
@@ -206,7 +204,7 @@ body {
                                             });
                                         </script>
                                         <h3>가설3</h3>
-                                        <p>가설3의 핵심 문구</p>
+                                        <p> 연령별 인구 수 </p>
                                     </a>
                                     <a href="#0" id="result">
                                         <script>
@@ -217,7 +215,7 @@ body {
                                             });
                                         </script>
                                         <h3>결론</h3>
-                                        <p>결론의 핵심 문구</p>
+                                        <p>결론</p>
                                     </a>
                                 </div>
                             </div>
@@ -226,13 +224,13 @@ body {
                         <li class="l-section section">
                             <!--개발자들 소개-->
                             <div class="work">
-                                <h2>Developer</h2>
+                                <h2>Developers</h2>
                                 <div class="work--lockup">
                                     <ul class="slider">
                                         <li class="slider--item slider--item-left">
                                             <a href="#0">
                                                 <div class="slider--item-image">
-                                                    <img src="./static/bootstrap/assets/img/도비!.jpeg">
+                                                    <img src="./static/bootstrap/assets/img/images__3_-removebg-preview.png">
                                                 </div>
                                                 <p class="slider--item-title">강나영</p>
                                                 <p class="slider--item-description">탱커 </p>
@@ -241,7 +239,7 @@ body {
                                         <li class="slider--item slider--item-center">
                                             <a href="#0">
                                                 <div class="slider--item-image">
-                                                    <img src="./static/bootstrap/assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
+                                                    <img src="./static/bootstrap/assets/img/누끼.png">
                                                 </div>
                                                 <p class="slider--item-title">오영환</p>
                                                 <p class="slider--item-description">딜러</p>
@@ -250,7 +248,7 @@ body {
                                         <li class="slider--item slider--item-right">
                                             <a href="#0">
                                                 <div class="slider--item-image">
-                                                    <img src="./static/bootstrap/assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
+                                                    <img src="./static/bootstrap/assets/img/빵빵이.png">
                                                 </div>
                                                 <p class="slider--item-title">윤이현</p>
                                                 <p class="slider--item-description">서포터 </p>
@@ -297,17 +295,17 @@ body {
                                         <h3>가설 1-1</h3>
 
 
-                                    <a href="#0" id="hypo_1_2">
-                                        <img src="./static/bootstrap/assets/img/프로젝트사진2.png" alt="출산율" style="width:100%; height:100%;">
-                                        <script>
-                                            const for_hypo_1_2 = document.getElementById("for_hypo_1_2")
-                                            const hypo_1_2 = document.getElementById("hypo_1_2");
-                                            hypo_1_2.addEventListener("click", function() {
-                                                for_hypo_1_2.click();
-                                            });
-                                        </script>
-                                        <h3>가설 1-2</h3>
-                                    </a>
+                                        <a href="#0" id="hypo_1_2">
+                                            <img src="./static/bootstrap/assets/img/프로젝트사진2.png" alt="출산율" style="width:100%; height:100%;">
+                                            <script>
+                                                const for_hypo_1_2 = document.getElementById("for_hypo_1_2")
+                                                const hypo_1_2 = document.getElementById("hypo_1_2");
+                                                hypo_1_2.addEventListener("click", function() {
+                                                    for_hypo_1_2.click();
+                                                });
+                                            </script>
+                                            <h3>가설 1-2</h3>
+                                        </a>
 
                                 </div>
                             </div>
@@ -319,15 +317,6 @@ body {
 
                                     <h2>가설1-1</h2>
                                     <img src="./static/bootstrap/assets/img/가설1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
-                                    <!--                                    <a href="#0">Career-->
-                                    <!--                                        <span>-->
-                                    <!--                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
-                                    <!--                                                <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
-                                    <!--                                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />-->
-                                    <!--                                                </g>-->
-                                    <!--                                            </svg>-->
-                                    <!--                                        </span>-->
-                                    <!--                                    </a>-->
 
                                 </div>
                                 <div class="about--options">
@@ -401,13 +390,13 @@ body {
                                         <details>
                                             <summary style="padding-left: 50px;"> 코드 </summary>
                                             <div style="padding-left: 50px;">
-                                               시각화 코드
+                                                시각화 코드
                                             </div>
                                         </details>
 
                                     </div>
                                     <!--수평막대그래프-->
-                                    <div >
+                                    <div>
                                         <img src="./static/bootstrap/assets/img/폐교연도_별_폐교수.png" alt="폐교연도 별 폐교수" class="box_h_map" style="width:35%; height:600px;">
                                     </div>
                                 </div>
@@ -426,60 +415,52 @@ body {
                         </li>
                         <!--가설3 끝-->
                         <!--result-->
+                        <li class="l-section_ section">
+                            <div class="contact">
+                                <div class="contact--lockup">
+                                    <div class="slideshow-container">
 
+                                        <div class="mySlideDiv fade active">
+                                            <img src="./static/bootstrap/assets/img/img (2).png" style="width:80%; height:80%; padding-left:90px;">
+                                        </div>
 
+                                        <div class="mySlideDiv fade">
+                                            <img src="./static/bootstrap/assets/img/image.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
+                                        </div>
 
+                                        <div class="mySlideDiv fade">
+                                            <img src="./static/bootstrap/assets/img/img3.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
+                                        </div>
 
-
-
-                    <li class="l-section_ section">
-                        <div class="contact">
-                            <div class="contact--lockup">
-                                <div class="slideshow-container">
-
-                                    <div class="mySlideDiv fade active">
-                                        <img src="./static/bootstrap/assets/img/img (2).png" style="width:80%; height:80%; padding-left:90px;">
-                                    </div>
-
-                                    <div class="mySlideDiv fade">
-                                        <img src="./static/bootstrap/assets/img/image.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
-                                    </div>
-
-                                    <div class="mySlideDiv fade">
-                                        <img src="./static/bootstrap/assets/img/img3.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
-                                    </div>
-
-                                    <a class="prev" onclick="prevSlide()">❮</a>
-                                    <a class="next" onclick="nextSlide()">❯</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
+                                        <a class="prev" onclick="prevSlide()">❮</a>
+                                        <a class="next" onclick="nextSlide()">❯</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-
-
-
-
-                        <!--result 끝-->
-                    </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <ul class="outer-nav">
-            <li class="is-active">Home</li>
-            <li>Developers</li>
-            <li>hypothesis 1</li>
-            <li>hypothesis 1-1</li>
-            <li>hypothesis 1-2</li>
-            <li>hypothesis 2</li>
-            <li>hypothesis 3</li>
-            <li>Result</li>
+        </li>
+
+
+
+
+        <!--result 끝-->
         </ul>
+    </div>
+    </div>
+    </div>
+    <ul class="outer-nav">
+        <li class="is-active">Home</li>
+        <li>Developers</li>
+        <li>가설 1</li>
+        <li>가설 1-1</li>
+        <li>가설 1-2</li>
+        <li>가설 2</li>
+        <li>가설 3</li>
+        <li>결론</li>
+    </ul>
     </div>
 
 
