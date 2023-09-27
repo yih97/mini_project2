@@ -70,6 +70,11 @@
         .next {
             right: 0;
         }
+
+        .view_code:hover span {
+          color: #FFFEFA; /* 호버 시 적용할 색상을 지정하세요 */
+        }
+
     </style>
     <script>
         var slideIndex = 1;
@@ -390,9 +395,12 @@
                                             {{map|safe}}
                                         </figure>
                                         <details>
-                                            <summary style="padding-left: 50px;"> 코드 </summary>
+                                            <summary style="padding-left: 50px;"> 코드👇 </summary>
                                             <div style="padding-left: 50px;">
-                                                시각화 코드
+                                                <button onclick="window.open('https://www.notion.so/bb137e7e4b2045f689516bdb8382a648')" class="view_code" style="text-decoration:none; color:#A19E9D; background-color:transparent; border:none;">
+                                                  <span style="transition: color 0.3s;">↪ 코드 확인</span>
+                                                </button>
+
                                             </div>
                                         </details>
 
@@ -408,11 +416,12 @@
                         <!--가설3-->
                         <li class="l-section section">
                             <div class="contact">
-                                <div class="contact--lockup" style="margin-left:470px">
-                                    <img src="./static/bootstrap/assets/img/2008.png" style="width: 500px; height: 500px;" />
-                                    <img src="./static/bootstrap/assets/img/2023.png" style="width: 500px; height: 500px; margin-right: 100px;" />
+                                <h2 style="text-align: center; margin-top: 200px;">연령별 비교 그래프</h2>
+                                    <div class="contact--lockup" style="margin-left:800px; ">
+                                        <img src="./static/bootstrap/assets/img/2008.png" style="width: 600px; height: 480px; margin-left:900px;  margin-bottom:400px;" />
+                                        <img src="./static/bootstrap/assets/img/2023.png" style="width: 600px; height: 480px; margin-right: 100px; margin-bottom:400px;" />
 
-                                </div>
+                                    </div>
                             </div>
                         </li>
                         <!--가설3 끝-->
