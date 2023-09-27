@@ -70,6 +70,11 @@
         .next {
             right: 0;
         }
+
+        .view_code:hover span {
+          color: #FFFEFA; /* 호버 시 적용할 색상을 지정하세요 */
+        }
+
     </style>
     <script>
         var slideIndex = 1;
@@ -284,7 +289,6 @@
                                     <img src="./static/bootstrap/assets/img/폐교사진.jpg" alt="About Us" style="width:120%; height:110%; opacity:45%;  position:absolute;left:-60px; top:-70px; z-index:1;">
                                 </div>
                                 <div class="about--options">
-
                                     <a href="#0" id="hypo_1_1">
                                         <img src="./static/bootstrap/assets/img/프로젝트메인사진1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
                                         <script>
@@ -298,7 +302,7 @@
 
 
                                         <a href="#0" id="hypo_1_2">
-                                            <img src="./static/bootstrap/assets/img/프로젝트사진2.png" alt="출산율" style="width:100%; height:100%;">
+                                            <img src="./static/bootstrap/assets/img/1-2img.png" alt="출산율" style="width:100%; height:100%;">
                                             <script>
                                                 const for_hypo_1_2 = document.getElementById("for_hypo_1_2")
                                                 const hypo_1_2 = document.getElementById("hypo_1_2");
@@ -317,13 +321,13 @@
                             <div class="about">
                                 <div class="about--banner">
 
-                                    <h2>분석-1</h2>
-                                    <img src="./static/bootstrap/assets/img/가설1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
+                                    <p style="font-size:35px; align=center; margin-top:10px; "><strong>입학자수와 출생자수는 서로 큰 상관관계가 있다?</strong></p>
+                                    <img src="./static/bootstrap/assets/img/가설1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px; align=center;">
 
                                 </div>
                                 <div class="about--options">
                                     <a href="#0" id="hypo_1_1_to_1">
-                                        <img src="./static/bootstrap/assets/img/school_main.jpg" alt="가설1페이지" style="width:100%; height:100%;">
+                                        <img src="./static/bootstrap/assets/img/폐교사진.jpg" alt="가설1페이지" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_1_to_1 = document.getElementById("hypo_1_1_to_1");
                                             hypo_1_1_to_1.addEventListener("click", function() {
@@ -334,7 +338,7 @@
                                     </a>
 
                                     <a href="#0" id="hypo_1_1_to_1_2">
-                                        <img src="./static/bootstrap/assets/img/연도별_교원_1인당_학생수와_교원수.png" alt="출산율" style="width:100%; height:100%;">
+                                        <img src="./static/bootstrap/assets/img/1-2img.png" alt="출산율" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_1_to_1_2 = document.getElementById("hypo_1_1_to_1_2");
                                             hypo_1_1_to_1_2.addEventListener("click", function() {
@@ -351,12 +355,14 @@
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
-                                    <h2> 분석 1-2 </h2>
-                                    <img id="student_per" src="./static/bootstrap/assets/img/연도별_교원_1인당_학생수와_교원수.png" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
+
+                                    <p style="font-size:35px; align=center; margin-top:10px; "><strong>교사 한명당 담당하는 학생수가 줄고 있다.?</strong></p>
+                                    <img id="student_per" src="./static/bootstrap/assets/img/범례수정사진.png" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
+
                                 </div>
                                 <div class="about--options">
                                     <a href="#0" id="hypo_1_2_to_1">
-                                        <img src="./static/bootstrap/assets/img/school_main.jpg" alt="메인페이지" style="width:100%; height:100%;">
+                                        <img src="./static/bootstrap/assets/img/폐교사진.jpg" alt="메인페이지" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_2_to_1 = document.getElementById("hypo_1_2_to_1");
                                             hypo_1_2_to_1.addEventListener("click", function() {
@@ -390,9 +396,12 @@
                                             {{map|safe}}
                                         </figure>
                                         <details>
-                                            <summary style="padding-left: 50px;"> 코드 </summary>
+                                            <summary style="padding-left: 50px;"> 코드👇 </summary>
                                             <div style="padding-left: 50px;">
-                                                시각화 코드
+                                                <button onclick="window.open('https://www.notion.so/bb137e7e4b2045f689516bdb8382a648')" class="view_code" style="text-decoration:none; color:#A19E9D; background-color:transparent; border:none;">
+                                                  <span style="transition: color 0.3s;">↪ 코드 확인</span>
+                                                </button>
+
                                             </div>
                                         </details>
 
@@ -408,11 +417,12 @@
                         <!--가설3-->
                         <li class="l-section section">
                             <div class="contact">
-                                <div class="contact--lockup" style="margin-left:470px">
-                                    <img src="./static/bootstrap/assets/img/2008.png" style="width: 500px; height: 500px;" />
-                                    <img src="./static/bootstrap/assets/img/2023.png" style="width: 500px; height: 500px; margin-right: 100px;" />
+                                <h2 style="text-align: center; margin-top: 200px;">연령별 비교 그래프</h2>
+                                    <div class="contact--lockup" style="margin-left:800px; ">
+                                        <img src="./static/bootstrap/assets/img/2008.png" style="width: 600px; height: 480px; margin-left:900px;  margin-bottom:400px;" />
+                                        <img src="./static/bootstrap/assets/img/2023.png" style="width: 600px; height: 480px; margin-right: 100px; margin-bottom:400px;" />
 
-                                </div>
+                                    </div>
                             </div>
                         </li>
                         <!--가설3 끝-->
