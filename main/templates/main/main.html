@@ -4,51 +4,105 @@
 <html lang="ko">
 
 <head>
-    <title>closed school</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="HTML5 website template">
-    <meta name="keywords" content="global, template, html, sass, jquery">
-    <meta name="author" content="Bucky Maler">
-    <link rel="stylesheet" href="./static/bootstrap/assets/css/main.css">
+<title>closed school</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="HTML5 website template">
+<meta name="keywords" content="global, template, html, sass, jquery">
+<meta name="author" content="Bucky Maler">
+<link rel="stylesheet" href="./static/bootstrap/assets/css/main.css">
 
 
-    <style>
+<style>
+  .folium_map{
+  padding-top : 100px;
+  padding-left: 10%;
+  width : 55%;
+  float : left;
+}
 
-      .folium_map{
-      padding-top : 100px;
-      padding-left: 10%;
-      height: 110%;
-      width: 60%;
-      float : left;
+.box_h_map{
+  float : right;
+  padding-top : 85px;
+ }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+}
+
+.mySlideDiv {
+    display: none;
+}
+
+.mySlideDiv.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-size: 24px;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+</style>
+<script>
+    var slideIndex = 1;
+    showSlide(slideIndex);
+
+    // 다음 슬라이드를 보여줍니다.
+    function nextSlide() {
+        showSlide(slideIndex += 1);
     }
 
-    .box_h{
-      padding-top : 100px;
-      width : 20%;
-      height : 90%;
-      float : left;
-      margin-left : 1px;
-     }
+    // 이전 슬라이드를 보여줍니다.
+    function prevSlide() {
+        showSlide(slideIndex -= 1);
+    }
 
-
-
-  </style>
-
-
-
-
-        .box_h {
-            padding-top: 100px;
-            width: 20%;
-            height: 90%;
-            float: left;
-            margin-left: 1px;
+    // 현재 슬라이드를 보여줍니다.
+    function showSlide(n) {
+        var slides = document.getElementsByClassName("mySlideDiv");
+        if (n > slides.length) {
+            slideIndex = 1;
         }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
 
 
-    </style>
+
+
+
 </head>
 
 
@@ -225,7 +279,7 @@
                             <div class="about">
                                 <div class="about--banner">
                                     <h2> 가설 1 </h2>
-                                    <img src="./static/bootstrap/assets/img/about-visual.png" alt="About Us">
+                                    <img src="./static/bootstrap/assets/img/school_main.jpg" alt="About Us" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
                                 </div>
                                 <div class="about--options">
 
@@ -241,7 +295,7 @@
                                         <h3>가설 1-1</h3>
 
                                     <a href="#0" id="hypo_1_2">
-
+                                        <img src="./static/bootstrap/assets/img/프로젝트사진2.png" alt="출산율" style="width:100%; height:100%;">
                                         <script>
                                             const for_hypo_1_2 = document.getElementById("for_hypo_1_2")
                                             const hypo_1_2 = document.getElementById("hypo_1_2");
@@ -258,7 +312,6 @@
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
-
                                     <h4>출산율에 따른<br>초등학교<br>입학자수 분석</h4>
                                     <img src="./static/bootstrap/assets/img/1-1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100px; height:100px;">
 <!--                                    <a href="#0">Career-->
@@ -274,6 +327,7 @@
                                 </div>
                                 <div class="about--options">
                                     <a href="#0" id="hypo_1_1_to_1">
+                                        <img src="./static/bootstrap/assets/img/프로젝트메인사진1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_1_to_1 = document.getElementById("hypo_1_1_to_1");
                                             hypo_1_1_to_1.addEventListener("click", function() {
@@ -284,7 +338,7 @@
                                     </a>
 
                                     <a href="#0" id="hypo_1_1_to_1_2">
-                                        가설 1-2 테스트
+                                        <img src="./static/bootstrap/assets/img/프로젝트사진2.png" alt="출산율" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_1_to_1_2 = document.getElementById("hypo_1_1_to_1_2");
                                             hypo_1_1_to_1_2.addEventListener("click", function() {
@@ -303,10 +357,10 @@
                                 <div class="about--banner">
                                     <h2> 가설 1-2 </h2>
                                     <img id="student_per" src="./static/bootstrap/assets/img/연도별_교원_1인당_학생수와_교원수.png" alt="About Us" style="width:80%;height:80%;">
-
                                 </div>
                                 <div class="about--options">
                                     <a href="#0" id="hypo_1_2_to_1">
+                                        <img src="./static/bootstrap/assets/img/프로젝트메인사진1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_2_to_1 = document.getElementById("hypo_1_2_to_1");
                                             hypo_1_2_to_1.addEventListener("click", function() {
@@ -316,14 +370,13 @@
                                         <h3>가설 1</h3>
                                     </a>
                                     <a href="#0" id="hypo_1_2_to_1_1">
-
+                                        <img src="./static/bootstrap/assets/img/프로젝트사진1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
                                         <script>
                                             const hypo_1_2_to_1_1 = document.getElementById("hypo_1_2_to_1_1");
                                             hypo_1_2_to_1_1.addEventListener("click", function() {
                                                 for_hypo_1_1.click();
                                             });
                                         </script>
-
                                         <h3>가설 1-1</h3>
                                     </a>
                                 </div>
@@ -335,35 +388,29 @@
                                 <!--부모태그-->
                                 <div class="main">
                                     <!--folium_map태그-->
-
-                                    <div class="folium_map" style="padding-top:100px" width="800",height="900">
-
+                                    <div class="folium_map" style="height:600px;">
                                         <figure id="map_size">
                                             {{map|safe}}
-                                            <details>
-                                                <summary> 폐교수치화내용-></summary>
-                                                <div>
-                                                    test
-                                                </div>
-                                            </details>
                                         </figure>
+                                        <details>
+                                            <summary style="padding-left: 50px;"> 코드 </summary>
+                                            <div style="padding-left: 50px;">
+                                               시각화 코드
+                                            </div>
+                                        </details>
 
                                     </div>
                                     <!--수평막대그래프-->
-                                    <div class="box_h_map" style="padding-top:100px">
-
-                                        <img src="./static/bootstrap/assets/img/폐교연도_별_폐교수.png" alt="폐교연도 별 폐교수" width="450" height="700">
-                                    </div>-->
+                                    <div >
+                                        <img src="./static/bootstrap/assets/img/폐교연도_별_폐교수.png" alt="폐교연도 별 폐교수" class="box_h_map" style="width:35%; height:600px;">
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
-
                         <!--가설3-->
-
                         <li class="l-section section">
                             <div class="contact">
-
                                 <div class="contact--lockup" style="margin-left:470px">
                                     <img src="./static/bootstrap/assets/img/2008.png" style="width: 500px; height: 500px;"/>
                                     <img src="./static/bootstrap/assets/img/2023.png" style="width: 500px; height: 500px; margin-right: 100px;"/>
@@ -371,12 +418,92 @@
                                 </div>
                             </div>
                         </li>
-
                         <!--가설3 끝-->
-
-
                         <!--result-->
-                        <li class="l-section section">
+
+
+
+
+
+<!--                        <li class="l-section_ section">-->
+<!--                            &lt;!&ndash;개발자들 소개&ndash;&gt;-->
+<!--                            <div class="work_">-->
+<!--                                <h2>Developer</h2>-->
+<!--                                <div class="work&#45;&#45;lockup_">-->
+<!--                                    <ul class="slider_">-->
+<!--                                        <li class="slider&#45;&#45;item_ slider&#45;&#45;item-left">-->
+<!--                                            <a href="#0">-->
+<!--                                                <div class="slider&#45;&#45;item-image_">-->
+<!--                                                    <img src="./static/bootstrap/assets/img/work-victory.jpg" alt="Victory">-->
+<!--                                                </div>-->
+<!--                                                <p class="slider&#45;&#45;item-title_">강나영</p>-->
+<!--                                                <p class="slider&#45;&#45;item-description_">작업내용~~</p>-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li class="slider&#45;&#45;item_ slider&#45;&#45;item-center_">-->
+<!--                                            <a href="#0">-->
+<!--                                                <div class="slider&#45;&#45;item-image_">-->
+<!--                                                    <img src="./static/bootstrap/assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">-->
+<!--                                                </div>-->
+<!--                                                <p class="slider&#45;&#45;item-title_">오영환</p>-->
+<!--                                                <p class="slider&#45;&#45;item-description_">작업내용~~</p>-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li class="slider&#45;&#45;item_ slider&#45;&#45;item-right">-->
+<!--                                            <a href="#0">-->
+<!--                                                <div class="slider&#45;&#45;item-image_">-->
+<!--                                                    <img src="./static/bootstrap/assets/img/work-alex-nowak.jpg" alt="Alex Nowak">-->
+<!--                                                </div>-->
+<!--                                                <p class="slider&#45;&#45;item-title_">윤이현</p>-->
+<!--                                                <p class="slider&#45;&#45;item-description_">작업내용~~</p>-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                    <div class="slider&#45;&#45;prev_">-->
+<!--                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
+<!--                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
+<!--                                                <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29-->
+<!--                                                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180-->
+<!--                                                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />-->
+<!--                                            </g>-->
+<!--                                        </svg>-->
+<!--                                    </div>-->
+<!--                                    <div class="slider&#45;&#45;next_">-->
+<!--                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
+<!--                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
+<!--                                                <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />-->
+<!--                                            </g>-->
+<!--                                        </svg>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+
+
+                    <li class="l-section_ section">
+                        <div class="contact">
+                            <div class="contact--lockup">
+                                <div class="slideshow-container">
+
+                                    <div class="mySlideDiv fade active">
+                                        <img src="./static/bootstrap/assets/img/img (2).png" style="width:80%; height:80%; padding-left:90px;">
+                                    </div>
+
+                                    <div class="mySlideDiv fade">
+                                        <img src="./static/bootstrap/assets/img/image.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
+                                    </div>
+
+                                    <div class="mySlideDiv fade">
+                                        <img src="./static/bootstrap/assets/img/img3.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
+                                    </div>
+
+                                    <a class="prev" onclick="prevSlide()">❮</a>
+                                    <a class="next" onclick="nextSlide()">❯</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
                     </ul>
                 </div>
