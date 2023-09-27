@@ -55,7 +55,7 @@
         .next {
             cursor: pointer;
             position: absolute;
-            top: 50%;
+            top: 28%;
             transform: translateY(-50%);
             padding: 16px;
             color: white;
@@ -286,7 +286,7 @@
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
-                                    <h2 style="position:relative; z-index:2"> 분석 1 </h2>
+                                    <h2 style="position:relative; z-index:2"> 학교의 인원 수 <br> 정말 줄고 있는가? </h2>
                                     <img src="./static/bootstrap/assets/img/폐교사진.jpg" alt="About Us" style="width:120%; height:110%; opacity:45%;  position:absolute;left:-60px; top:-70px; z-index:1;">
                                 </div>
                                 <div class="about--options">
@@ -429,31 +429,37 @@
                         <!--result-->
                         <li class="l-section_ section">
                             <div class="contact">
-                                <div class="contact--lockup">
-                                    <div class="slideshow-container">
+                                <h2 onclick="window.open('https://www.notion.so/bb137e7e4b2045f689516bdb8382a648')" class="view_code" style="text-decoration:none; color:#A19E9D; background-color:transparent; border:none; text-align: center; margin-top: 200px;">
+                                  <span style="transition: color 0.3s;"><분석 결과></span>
+                                </h2>
+                                    <div class="contact--lockup">
+                                            <div class="slideshow-container">
 
-                                        <div class="mySlideDiv fade active">
-                                            <img src="./static/bootstrap/assets/img/img (2).png" style="width:80%; height:80%; padding-left:90px;">
+                                                <div class="mySlideDiv fade active">
+                                                    <img src="./static/bootstrap/assets/img/img (2).png" style="width:80%; height:80%; padding-left:90px; margin-bottom:500px;">
+                                                </div>
+
+                                                <div class="mySlideDiv fade">
+                                                    <img src="./static/bootstrap/assets/img/image.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px; margin-bottom:500px;">
+                                                </div>
+
+                                                <div class="mySlideDiv fade">
+                                                    <img src="./static/bootstrap/assets/img/img3.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px; margin-bottom:500px;">
+                                                </div>
+
+                                                <a class="prev" onclick="prevSlide()" >❮</a>
+                                                <a class="next" onclick="nextSlide()" >❯</a>
+                                                    <button onclick="window.open('https://www.notion.so/bb137e7e4b2045f689516bdb8382a648')" class="view_code" style="text-decoration:none; color:#A19E9D; background-color:transparent; border:none;">
+                                                      <span style="transition: color 0.3s;">↪ 코드 확인</span>
+                                                    </button>
+                                            </div>
                                         </div>
-
-                                        <div class="mySlideDiv fade">
-                                            <img src="./static/bootstrap/assets/img/image.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
-                                        </div>
-
-                                        <div class="mySlideDiv fade">
-                                            <img src="./static/bootstrap/assets/img/img3.png" style="width:720px; height:501px; padding-left:90px; padding-right:90px;">
-                                        </div>
-
-                                        <a class="prev" onclick="prevSlide()">❮</a>
-                                        <a class="next" onclick="nextSlide()">❯</a>
                                     </div>
-                                </div>
+                                </li>
                             </div>
-                        </li>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </li>
+                </li>
 
 
 
