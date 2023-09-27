@@ -253,6 +253,88 @@ $( document ).ready(function() {
 
   }
 
+
+
+//  function workSlider_() {
+//
+//    $('.slider--prev_, .slider--next_').click(function() {
+//
+//      var $this = $(this),
+//          curLeft = $('.slider_').find('.slider--item-left_'),
+//          curLeftPos = $('.slider_').children().index(curLeft),
+//          curCenter = $('.slider_').find('.slider--item-center_'),
+//          curCenterPos = $('.slider_').children().index(curCenter),
+//          curRight = $('.slider_').find('.slider--item-right_'),
+//          curRightPos = $('.slider_').children().index(curRight),
+//          totalWorks = $('.slider_').children().length,
+//          $left = $('.slider--item-left_'),
+//          $center = $('.slider--item-center_'),
+//          $right = $('.slider--item-right_'),
+//          $item = $('.slider--item_');
+//
+//      $('.slider_').animate({ opacity : 0 }, 400);
+//
+//      setTimeout(function(){
+//
+//      if ($this.hasClass('slider--next_')) {
+//        if (curLeftPos < totalWorks - 1 && curCenterPos < totalWorks - 1 && curRightPos < totalWorks - 1) {
+//          $left.removeClass('slider--item-left_').next().addClass('slider--item-left_');
+//          $center.removeClass('slider--item-center_').next().addClass('slider--item-center_');
+//          $right.removeClass('slider--item-right_').next().addClass('slider--item-right_');
+//        }
+//        else {
+//          if (curLeftPos === totalWorks - 1) {
+//            $item.removeClass('slider--item-left_').first().addClass('slider--item-left_');
+//            $center.removeClass('slider--item-center_').next().addClass('slider--item-center_');
+//            $right.removeClass('slider--item-right_').next().addClass('slider--item-right_');
+//          }
+//          else if (curCenterPos === totalWorks - 1) {
+//            $left.removeClass('slider--item-left_').next().addClass('slider--item-left_');
+//            $item.removeClass('slider--item-center_').first().addClass('slider--item-center_');
+//            $right.removeClass('slider--item-right_').next().addClass('slider--item-right_');
+//          }
+//          else {
+//            $left.removeClass('slider--item-left_').next().addClass('slider--item-left_');
+//            $center.removeClass('slider--item-center_').next().addClass('slider--item-center_');
+//            $item.removeClass('slider--item-right_').first().addClass('slider--item-right_');
+//          }
+//        }
+//      }
+//      else {
+//        if (curLeftPos !== 0 && curCenterPos !== 0 && curRightPos !== 0) {
+//          $left.removeClass('slider--item-left_').prev().addClass('slider--item-left_');
+//          $center.removeClass('slider--item-center_').prev().addClass('slider--item-center_');
+//          $right.removeClass('slider--item-right_').prev().addClass('slider--item-right_');
+//        }
+//        else {
+//          if (curLeftPos === 0) {
+//            $item.removeClass('slider--item-left_').last().addClass('slider--item-left_');
+//            $center.removeClass('slider--item-center_').prev().addClass('slider--item-center_');
+//            $right.removeClass('slider--item-right_').prev().addClass('slider--item-right_');
+//          }
+//          else if (curCenterPos === 0) {
+//            $left.removeClass('slider--item-left_').prev().addClass('slider--item-left_');
+//            $item.removeClass('slider--item-center_').last().addClass('slider--item-center_');
+//            $right.removeClass('slider--item-right_').prev().addClass('slider--item-right_');
+//          }
+//          else {
+//            $left.removeClass('slider--item-left_').prev().addClass('slider--item-left_');
+//            $center.removeClass('slider--item-center_').prev().addClass('slider--item-center_');
+//            $item.removeClass('slider--item-right_').last().addClass('slider--item-right_');
+//          }
+//        }
+//      }
+//
+//    }, 400);
+//
+//    $('.slider_').animate({ opacity : 1 }, 400);
+//
+//    });
+//
+//  }
+
+
+
   function transitionLabels() {
 
     $('.work-request--information input').focusout(function(){
@@ -278,6 +360,7 @@ $( document ).ready(function() {
   transitionLabels();
 
 });
+
 
 <script type="text/javascript">
 
@@ -351,5 +434,6 @@ function nextSlide() {
 }
 
 </script>
+
 
 
