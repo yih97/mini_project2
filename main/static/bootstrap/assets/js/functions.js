@@ -362,283 +362,78 @@ $( document ).ready(function() {
 });
 
 
-// @codekit-prepend "/vendor/hammer-2.0.8.js";
+<script type="text/javascript">
 
-$(document).ready(function() {
+$(document).ready(function () {
+	$(".mySlideDiv").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
 
-  // DOMMouseScroll included for firefox support
-  var canScroll_ = true,
-      scrollController_ = null;
-  $(this).on('mousewheel DOMMouseScroll', function(e_) {
-
-    if (!$('.outer-nav_').hasClass('is-vis_')) {
-
-      e_.preventDefault();
-
-      var delta_ = (e_.originalEvent.wheelDelta) ? -e_.originalEvent.wheelDelta : e_.originalEvent.detail * 20;
-
-      if (delta_ > 50 && canScroll_) {
-        canScroll_ = false;
-        clearTimeout(scrollController_);
-        scrollController_ = setTimeout(function() {
-          canScroll_ = true;
-        }, 800);
-        updateHelper_(1);
-      }
-      else if (delta_ < -50 && canScroll_) {
-        canScroll_ = false;
-        clearTimeout(scrollController_);
-        scrollController_ = setTimeout(function() {
-          canScroll_ = true;
-        }, 800);
-        updateHelper_(-1);
-      }
-
-    }
-
-  });
-
-  $('.side-nav_ li_, .outer-nav_ li_').click(function() {
-
-    if (!($(this).hasClass('is-active_'))) {
-
-      var $this_ = $(this),
-          curActive_ = $this_.parent().find('.is-active_'),
-          curPos_ = $this_.parent().children().index(curActive_),
-          nextPos_ = $this_.parent().children().index($this_),
-          lastItem_ = $(this).parent().children().length - 1;
-
-      updateNavs_(nextPos_);
-      updateContent_(curPos_, nextPos_, lastItem_);
-
-    }
-
-  });
-
-  $('.cta_').click(function() {
-
-    var curActive_ = $('.side-nav_').find('.is-active_'),
-        curPos_ = $('.side-nav_').children().index(curActive_),
-        lastItem_ = $('.side-nav_').children().length - 1,
-        nextPos_ = lastItem_;
-
-    updateNavs_(lastItem_);
-    updateContent_(curPos_, nextPos_, lastItem_);
-
-  });
-
-  // swipe support for touch devices
-  var targetElement_ = document.getElementById('viewport_'),
-      mc_ = new Hammer(targetElement_);
-  mc_.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  mc_.on('swipeup swipedown', function(e_) {
-
-    updateHelper_(e_);
-
-  });
-
-  $(document).keyup(function(e_) {
-
-    if (!$('.outer-nav_').hasClass('is-vis_')) {
-      e_.preventDefault();
-      updateHelper_(e_);
-    }
-
-  });
-
-  // determine scroll, swipe, and arrow key direction
-  function updateHelper_(param_) {
-
-    var curActive_ = $('.side-nav_').find('.is-active_'),
-        curPos_ = $('.side-nav_').children().index(curActive_),
-        lastItem_ = $('.side-nav_').children().length - 1,
-        nextPos_ = 0;
-
-    if (param_.type === "swipeup" || param_.keyCode === 40 || param_ > 0) {
-      if (curPos_ !== lastItem_) {
-        nextPos_ = curPos_ + 1;
-        updateNavs_(nextPos_);
-        updateContent_(curPos_, nextPos_, lastItem_);
-      }
-      else {
-        updateNavs_(nextPos_);
-        updateContent_(curPos_, nextPos_, lastItem_);
-      }
-    }
-    else if (param_.type === "swipedown" || param_.keyCode === 38 || param_ < 0) {
-      if (curPos_ !== 0) {
-        nextPos_ = curPos_ - 1;
-        updateNavs_(nextPos_);
-        updateContent_(curPos_, nextPos_, lastItem_);
-      }
-      else {
-        nextPos_ = lastItem_;
-        updateNavs_(nextPos_);
-        updateContent_(curPos_, nextPos_, lastItem_);
-      }
-    }
-
-  }
-
-  // sync side and outer navigations
-  function updateNavs_(nextPos_) {
-
-    $('.side-nav_, .outer-nav_').children().removeClass('is-active_');
-    $('.side-nav_').children().eq(nextPos_).addClass('is-active_');
-    $('.outer-nav_').children().eq(nextPos_).addClass('is-active_');
-
-  }
-
-  // update main content area
-  function updateContent_(curPos_, nextPos_, lastItem_) {
-
-    $('.main-content_').children().removeClass('section--is-active_');
-    $('.main-content_').children().eq(nextPos_).addClass('section--is-active_');
-    $('.main-content_ .section_').children().removeClass('section--next_ section--prev_');
-
-    if (curPos_ === lastItem_ && nextPos_ === 0 || curPos_ === 0 && nextPos_ === lastItem_) {
-      $('.main-content_ .section_').children().removeClass('section--next_ section--prev_');
-    }
-    else if (curPos_ < nextPos_) {
-      $('.main-content_').children().eq(curPos_).children().addClass('section--next_');
-    }
-    else {
-      $('.main-content_').children().eq(curPos_).children().addClass('section--prev_');
-    }
-
-    if (nextPos_ !== 0 && nextPos_ !== lastItem_) {
-      $('.header--cta_').addClass('is-active_');
-    }
-    else {
-      $('.header--cta_').removeClass('is-active_');
-    }
-
-  }
-
-  function outerNav_() {
-
-    $('.header--nav-toggle_').click(function() {
-
-      $('.perspective_').addClass('perspective--modalview_');
-      setTimeout(function() {
-        $('.perspective_').addClass('effect-rotate-left--animate_');
-      }, 25);
-      $('.outer-nav_, .outer-nav_ li_, .outer-nav--return_').addClass('is-vis_');
-
-    });
-
-    $('.outer-nav--return_, .outer-nav_ li_').click(function() {
-
-      $('.perspective_').removeClass('effect-rotate-left--animate_');
-      setTimeout(function() {
-        $('.perspective_').removeClass('perspective--modalview_');
-      }, 400);
-      $('.outer-nav_, .outer-nav_ li_, .outer-nav--return_').removeClass('is-vis_');
-
-    });
-
-  }
-
-  function workSlider_() {
-
-    $('.slider--prev_, .slider--next_').click(function() {
-
-      var $this_ = $(this),
-          curLeft_ = $('.slider_').find('.slider--item-left_'),
-          curLeftPos_ = $('.slider_').children().index(curLeft_),
-          curCenter_ = $('.slider_').find('.slider--item-center_'),
-          curCenterPos_ = $('.slider_').children().index(curCenter_),
-          curRight_ = $('.slider_').find('.slider--item-right_'),
-          curRightPos_ = $('.slider_').children().index(curRight_),
-          totalWorks_ = $('.slider_').children().length,
-          $left_ = $('.slider--item-left_'),
-          $center_ = $('.slider--item-center_'),
-          $right_ = $('.slider--item-right_'),
-          $item_ = $('.slider--item_');
-
-      $('.slider_').animate({ opacity: 0 }, 400);
-
-      setTimeout(function() {
-
-        if ($this_.hasClass('slider--next_')) {
-          if (curLeftPos_ < totalWorks_ - 1 && curCenterPos_ < totalWorks_ - 1 && curRightPos_ < totalWorks_ - 1) {
-            $left_.removeClass('slider--item-left_').next().addClass('slider--item-left_');
-            $center_.removeClass('slider--item-center_').next().addClass('slider--item-center_');
-            $right_.removeClass('slider--item-right_').next().addClass('slider--item-right_');
-          }
-          else {
-            if (curLeftPos_ === totalWorks_ - 1) {
-              $item_.removeClass('slider--item-left_').first().addClass('slider--item-left_');
-              $center_.removeClass('slider--item-center_').next().addClass('slider--item-center_');
-              $right_.removeClass('slider--item-right_').next().addClass('slider--item-right_');
-            }
-            else if (curCenterPos_ === totalWorks_ - 1) {
-              $left_.removeClass('slider--item-left_').next().addClass('slider--item-left_');
-              $item_.removeClass('slider--item-center_').first().addClass('slider--item-center_');
-              $right_.removeClass('slider--item-right_').next().addClass('slider--item-right_');
-            }
-            else {
-              $left_.removeClass('slider--item-left_').next().addClass('slider--item-left_');
-              $center_.removeClass('slider--item-center_').next().addClass('slider--item-center_');
-              $item_.removeClass('slider--item-right_').first().addClass('slider--item-right_');
-            }
-          }
-        }
-        else {
-          if (curLeftPos_ !== 0 && curCenterPos_ !== 0 && curRightPos_ !== 0) {
-            $left_.removeClass('slider--item-left_').prev().addClass('slider--item-left_');
-            $center_.removeClass('slider--item-center_').prev().addClass('slider--item-center_');
-            $right_.removeClass('slider--item-right_').prev().addClass('slider--item-right_');
-          }
-          else {
-            if (curLeftPos_ === 0) {
-              $item_.removeClass('slider--item-left_').last().addClass('slider--item-left_');
-              $center_.removeClass('slider--item-center_').prev().addClass('slider--item-center_');
-              $right_.removeClass('slider--item-right_').prev().addClass('slider--item-right_');
-            }
-            else if (curCenterPos_ === 0) {
-              $left_.removeClass('slider--item-left_').prev().addClass('slider--item-left_');
-              $item_.removeClass('slider--item-center_').last().addClass('slider--item-center_');
-              $right_.removeClass('slider--item-right_').prev().addClass('slider--item-right_');
-            }
-            else {
-              $left_.removeClass('slider--item-left_').prev().addClass('slider--item-left_');
-              $center_.removeClass('slider--item-center_').prev().addClass('slider--item-center_');
-              $item_.removeClass('slider--item-right_').last().addClass('slider--item-right_');
-            }
-          }
-        }
-
-      }, 400);
-
-      $('.slider_').animate({ opacity: 1 }, 400);
-
-    });
-
-  }
-
-  function transitionLabels_() {
-
-    $('.work-request--information_ input').focusout(function() {
-
-      var textVal_ = $(this).val();
-
-      if (textVal_ === "") {
-        $(this).removeClass('has-value_');
-      }
-      else {
-        $(this).addClass('has-value_');
-      }
-
-      // correct mobile device window position
-      window.scrollTo(0, 0);
-
-    });
-
-  }
-
-  outerNav_();
-  workSlider_();
-  transitionLabels_();
-
+	setInterval(nextSlide, 4000); //4초(4000)마다 다음 슬라이드로 넘어감
 });
+
+//이전 슬라이드
+function prevSlide() {
+	$(".mySlideDiv").hide(); //모든 div 숨김
+	var allSlide = $(".mySlideDiv"); //모든 div 객체를 변수에 저장
+	var currentIndex = 0; //현재 나타난 슬라이드의 인덱스 변수
+
+	//반복문으로 현재 active클래스를 가진 div를 찾아 index 저장
+	$(".mySlideDiv").each(function(index,item){
+		if($(this).hasClass("active")) {
+			currentIndex = index;
+		}
+
+	});
+
+	//새롭게 나타낼 div의 index
+	var newIndex = 0;
+
+	if(currentIndex <= 0) {
+		//현재 슬라이드의 index가 0인 경우 마지막 슬라이드로 보냄(무한반복)
+		newIndex = allSlide.length-1;
+	} else {
+		//현재 슬라이드의 index에서 한 칸 만큼 뒤로 간 index 지정
+		newIndex = currentIndex-1;
+	}
+
+	//모든 div에서 active 클래스 제거
+	$(".mySlideDiv").removeClass("active");
+
+	//새롭게 지정한 index번째 슬라이드에 active 클래스 부여 후 show()
+	$(".mySlideDiv").eq(newIndex).addClass("active");
+	$(".mySlideDiv").eq(newIndex).show();
+
+}
+
+//다음 슬라이드
+function nextSlide() {
+	$(".mySlideDiv").hide();
+	var allSlide = $(".mySlideDiv");
+	var currentIndex = 0;
+
+	$(".mySlideDiv").each(function(index,item){
+		if($(this).hasClass("active")) {
+			currentIndex = index;
+		}
+
+	});
+
+	var newIndex = 0;
+
+	if(currentIndex >= allSlide.length-1) {
+		//현재 슬라이드 index가 마지막 순서면 0번째로 보냄(무한반복)
+		newIndex = 0;
+	} else {
+		//현재 슬라이드의 index에서 한 칸 만큼 앞으로 간 index 지정
+		newIndex = currentIndex+1;
+	}
+
+	$(".mySlideDiv").removeClass("active");
+	$(".mySlideDiv").eq(newIndex).addClass("active");
+	$(".mySlideDiv").eq(newIndex).show();
+
+}
+
+</script>
+
+
+

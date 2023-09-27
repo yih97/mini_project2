@@ -100,7 +100,13 @@ body {
 </script>
 
 
-
+        .folium_map {
+            padding-top: 100px;
+            padding-left: 10%;
+            height: 110%;
+            width: 60%;
+            float: left;
+        }
 
 
 </head>
@@ -114,7 +120,7 @@ body {
                 <div class="l-wrapper">
                     <header class="header">
                         <a class="header--logo" href="http://127.0.0.1:8000/">
-                            <img src="./static/bootstrap/assets/img/icon-school.png" alt="Global">
+                            <img src="./static/bootstrap/assets/img/icon-school.png">
 
                             <p>CLOSED SCHOOL</p>
                         </a>
@@ -141,9 +147,9 @@ body {
                         <li class="l-section section section--is-active">
                             <div class="intro">
                                 <div class="intro--banner">
-                                    <h1>closed<br>school</h1>
+                                    <h1 style="position:relative; z-index:2;">closed<br>school</h1>
                                     <!--메인화면 개발자 페이지이동 버튼-->
-                                    <button id="developer">Developers
+                                    <button id="developer" style="position:relative; z-index:2;">Developers
                                         <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                                             <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                                                 <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
@@ -161,7 +167,7 @@ body {
                                     </br>
                                     </br>
                                     <!--메인화면 노션 페이지이동 버튼-->
-                                    <button onclick="window.open('https://aerial-okapi-469.notion.site/Closed_School-ef376ec1a42b4e45a0d1f2c86ee41c94?pvs=4')">Notion
+                                    <button style="position:relative; z-index:2;" onclick="window.open('https://aerial-okapi-469.notion.site/Closed_School-ef376ec1a42b4e45a0d1f2c86ee41c94?pvs=4')" class="btn_main">Notion
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                                             <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                                                 <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
@@ -169,7 +175,7 @@ body {
                                         </svg>
                                         <span class="btn-background"></span>
                                     </button>
-                                    <img src="./static/bootstrap/assets/img/empty-classroom.jpg" alt="Welcome" style="width:110%;height:110%;">
+                                    <img src="./static/bootstrap/assets/img/empty-classroom.jpg" style="width:120%;height:110%; position:relative; left:-60px; top:-370px; z-index:1   ;">
                                 </div>
                                 <!--메인 홈페이지 맨 밑에 부분-->
                                 <div class="intro--options">
@@ -230,10 +236,10 @@ body {
                                         <li class="slider--item slider--item-left">
                                             <a href="#0">
                                                 <div class="slider--item-image">
-                                                    <img src="./static/bootstrap/assets/img/work-victory.jpg" alt="Victory">
+                                                    <img src="./static/bootstrap/assets/img/도비!.jpeg">
                                                 </div>
                                                 <p class="slider--item-title">강나영</p>
-                                                <p class="slider--item-description">작업내용~~</p>
+                                                <p class="slider--item-description">탱커 </p>
                                             </a>
                                         </li>
                                         <li class="slider--item slider--item-center">
@@ -242,7 +248,7 @@ body {
                                                     <img src="./static/bootstrap/assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
                                                 </div>
                                                 <p class="slider--item-title">오영환</p>
-                                                <p class="slider--item-description">작업내용~~</p>
+                                                <p class="slider--item-description">딜러</p>
                                             </a>
                                         </li>
                                         <li class="slider--item slider--item-right">
@@ -251,7 +257,7 @@ body {
                                                     <img src="./static/bootstrap/assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
                                                 </div>
                                                 <p class="slider--item-title">윤이현</p>
-                                                <p class="slider--item-description">작업내용~~</p>
+                                                <p class="slider--item-description">서포터 </p>
                                             </a>
                                         </li>
                                     </ul>
@@ -265,7 +271,7 @@ body {
                                         </svg>
                                     </div>
                                     <div class="slider--next">
-                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                                             <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                                                 <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
                                             </g>
@@ -279,12 +285,14 @@ body {
                             <div class="about">
                                 <div class="about--banner">
                                     <h2> 가설 1 </h2>
+
                                     <img src="./static/bootstrap/assets/img/school_main.jpg" alt="About Us" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
+
                                 </div>
                                 <div class="about--options">
 
                                     <a href="#0" id="hypo_1_1">
-                                        <img src="./static/bootstrap/assets/img/프로젝트사진1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
+                                        <img src="./static/bootstrap/assets/img/가설1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100%; height:100%;">
                                         <script>
                                             const for_hypo_1_1 = document.getElementById("for_hypo_1_1")
                                             const hypo_1_1 = document.getElementById("hypo_1_1");
@@ -293,6 +301,7 @@ body {
                                             });
                                         </script>
                                         <h3>가설 1-1</h3>
+
 
                                     <a href="#0" id="hypo_1_2">
                                         <img src="./static/bootstrap/assets/img/프로젝트사진2.png" alt="출산율" style="width:100%; height:100%;">
@@ -305,6 +314,7 @@ body {
                                         </script>
                                         <h3>가설 1-2</h3>
                                     </a>
+
                                 </div>
                             </div>
                         </li>
@@ -312,17 +322,18 @@ body {
                         <li class="l-section section">
                             <div class="about">
                                 <div class="about--banner">
-                                    <h4>출산율에 따른<br>초등학교<br>입학자수 분석</h4>
-                                    <img src="./static/bootstrap/assets/img/1-1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:100px; height:100px;">
-<!--                                    <a href="#0">Career-->
-<!--                                        <span>-->
-<!--                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
-<!--                                                <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
-<!--                                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />-->
-<!--                                                </g>-->
-<!--                                            </svg>-->
-<!--                                        </span>-->
-<!--                                    </a>-->
+
+                                    <h2>가설1-1</h2>
+                                    <img src="./static/bootstrap/assets/img/가설1.png" alt="출산율에 따른 초등학교 입학자수 분석" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
+                                    <!--                                    <a href="#0">Career-->
+                                    <!--                                        <span>-->
+                                    <!--                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
+                                    <!--                                                <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
+                                    <!--                                                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />-->
+                                    <!--                                                </g>-->
+                                    <!--                                            </svg>-->
+                                    <!--                                        </span>-->
+                                    <!--                                    </a>-->
 
                                 </div>
                                 <div class="about--options">
@@ -356,7 +367,10 @@ body {
                             <div class="about">
                                 <div class="about--banner">
                                     <h2> 가설 1-2 </h2>
-                                    <img id="student_per" src="./static/bootstrap/assets/img/연도별_교원_1인당_학생수와_교원수.png" alt="About Us" style="width:80%;height:80%;">
+
+                                    <img id="student_per" src="./static/bootstrap/assets/img/연도별_교원_1인당_학생수와_교원수.png" style="width:80%; height:80%; margin-bottom: 100px; margin-left: 1000px;">
+
+
                                 </div>
                                 <div class="about--options">
                                     <a href="#0" id="hypo_1_2_to_1">
@@ -388,6 +402,7 @@ body {
                                 <!--부모태그-->
                                 <div class="main">
                                     <!--folium_map태그-->
+
                                     <div class="folium_map" style="height:600px;">
                                         <figure id="map_size">
                                             {{map|safe}}
@@ -412,8 +427,8 @@ body {
                         <li class="l-section section">
                             <div class="contact">
                                 <div class="contact--lockup" style="margin-left:470px">
-                                    <img src="./static/bootstrap/assets/img/2008.png" style="width: 500px; height: 500px;"/>
-                                    <img src="./static/bootstrap/assets/img/2023.png" style="width: 500px; height: 500px; margin-right: 100px;"/>
+                                    <img src="./static/bootstrap/assets/img/2008.png" style="width: 500px; height: 500px;" />
+                                    <img src="./static/bootstrap/assets/img/2023.png" style="width: 500px; height: 500px; margin-right: 100px;" />
 
                                 </div>
                             </div>
@@ -424,60 +439,6 @@ body {
 
 
 
-
-<!--                        <li class="l-section_ section">-->
-<!--                            &lt;!&ndash;개발자들 소개&ndash;&gt;-->
-<!--                            <div class="work_">-->
-<!--                                <h2>Developer</h2>-->
-<!--                                <div class="work&#45;&#45;lockup_">-->
-<!--                                    <ul class="slider_">-->
-<!--                                        <li class="slider&#45;&#45;item_ slider&#45;&#45;item-left">-->
-<!--                                            <a href="#0">-->
-<!--                                                <div class="slider&#45;&#45;item-image_">-->
-<!--                                                    <img src="./static/bootstrap/assets/img/work-victory.jpg" alt="Victory">-->
-<!--                                                </div>-->
-<!--                                                <p class="slider&#45;&#45;item-title_">강나영</p>-->
-<!--                                                <p class="slider&#45;&#45;item-description_">작업내용~~</p>-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        <li class="slider&#45;&#45;item_ slider&#45;&#45;item-center_">-->
-<!--                                            <a href="#0">-->
-<!--                                                <div class="slider&#45;&#45;item-image_">-->
-<!--                                                    <img src="./static/bootstrap/assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">-->
-<!--                                                </div>-->
-<!--                                                <p class="slider&#45;&#45;item-title_">오영환</p>-->
-<!--                                                <p class="slider&#45;&#45;item-description_">작업내용~~</p>-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        <li class="slider&#45;&#45;item_ slider&#45;&#45;item-right">-->
-<!--                                            <a href="#0">-->
-<!--                                                <div class="slider&#45;&#45;item-image_">-->
-<!--                                                    <img src="./static/bootstrap/assets/img/work-alex-nowak.jpg" alt="Alex Nowak">-->
-<!--                                                </div>-->
-<!--                                                <p class="slider&#45;&#45;item-title_">윤이현</p>-->
-<!--                                                <p class="slider&#45;&#45;item-description_">작업내용~~</p>-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                    <div class="slider&#45;&#45;prev_">-->
-<!--                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
-<!--                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
-<!--                                                <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29-->
-<!--                                                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180-->
-<!--                                                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />-->
-<!--                                            </g>-->
-<!--                                        </svg>-->
-<!--                                    </div>-->
-<!--                                    <div class="slider&#45;&#45;next_">-->
-<!--                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">-->
-<!--                                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">-->
-<!--                                                <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />-->
-<!--                                            </g>-->
-<!--                                        </svg>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </li>-->
 
 
                     <li class="l-section_ section">
@@ -505,6 +466,15 @@ body {
                         </div>
                     </li>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+
+                        <!--result 끝-->
                     </ul>
                 </div>
             </div>
@@ -527,6 +497,7 @@ body {
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
     </script>
     <script src="./static/bootstrap/assets/js/functions-min.js"></script>
+
 </body>
 
 </html>
